@@ -31,7 +31,7 @@ class MyAuthenticator(JWTAuthenticator):
                 payload = {
                     'user_id': 1,
                     'username': username,
-                    'exp' : datetime.datetime.utcnow() + datetime.timedelta(days=1)
+                    'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
                 }
                 token = self.gennerate_token(payload)
                 return token
